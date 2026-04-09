@@ -1,0 +1,26 @@
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+
+
+public class CubeGameUI : MonoBehaviour
+{
+
+    public TextMeshProUGUI TimerText;               //ui선언
+    public float Timer;                             //타이머 선언
+
+
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Timer += Time.deltaTime;                    //타이머 시간을 늘려준다.
+        TimerText.text = "생존시간 : " + Timer.ToString("0.00");    //문자열 형태로 변환해서 보여준다
+    }
+}
